@@ -24,8 +24,9 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
-Files/
-Extract/
+Files/*
+Extract/*
+*.json
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
