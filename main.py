@@ -6,7 +6,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
-
+"""
 # pega as informacoes de usuario e password do arquivo json
 with open("credenciais.json", "r") as read_file:
        data = json.load(read_file)
@@ -16,7 +16,7 @@ password = data["password"]
 
 # tentei usar o mongoDB Atlas, mas por causa do limite de espaço não rolou
 #conecxaoBanco = MongoClient('mongodb://'+user+':'+password+'@cluster-shard-00-00-sgjhn.azure.mongodb.net:27017,cluster-shard-00-01-sgjhn.azure.mongodb.net:27017,cluster-shard-00-02-sgjhn.azure.mongodb.net:27017/test?ssl=true&replicaSet=cluster-shard-0&authSource=admin&retryWrites=true&w=majority')
-
+"""
 # ----------------------------------
 print('Conecta no banco de dados...')
 conecxaoBanco = MongoClient("mongodb://localhost:27017/")
@@ -150,12 +150,15 @@ def controleInsercaoDadosBanco(partidos, ufs, posts):
                      insereDadosNoBanco(arquivoLido, posts)
 
 
+
+
 # -------------------------------
 # Controla as funções até a inserção de dados no banco
 controleInsercaoDadosBanco(partidos, ufs, posts)
 
 # -------------------------------
 # consulta dados no banco 
+print('Realiza consulta no banco de dados')
 result = posts.find({'inscricao': '000671372410'})
 for registro in result:
        print(registro)
