@@ -1,0 +1,3 @@
+python-interface
+beautifulsoup4
+pymongo

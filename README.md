@@ -5,10 +5,9 @@ This project has to objective make accessible information about political partie
 # Instalacao
 
 - Clone o repositório.
-- Rode o comando: pip install beautifulsoup4
-- Rode o comando: pip install pymongo
+- Rode o comando: pip3 install -r requirements.txt
 - Instalar o MongoDB Comunity Server <https://www.mongodb.com/download-center/community>
 - Fazer o download do banco de dados <https://drive.google.com/open?id=1iLPZUMEbbv6YV8wLjAvqTib3TtYd0G_L>
 - Descompactar o arquivo no diretorio "C:" (resultado da estrura de pastas deve ser: C:\data\db\)
 - Rode o comando "C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe"
-- Para executar, rode o comando pythom main.py
+- Para executar, rode o comando python main.py
